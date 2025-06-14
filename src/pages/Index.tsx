@@ -44,10 +44,18 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-background bg-mesh relative overflow-hidden">
+      {/* Animated background blobs */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse-slow"></div>
+      </div>
+
       <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
       
-      <main className="pt-16">
+      <main className="pt-16 relative z-10">
         <Hero scrollToSection={scrollToSection} />
         <About />
         <Skills />
@@ -55,14 +63,14 @@ const Index = () => {
         <Contact />
       </main>
 
-      <footer className="bg-slate-900 text-white py-8">
+      <footer className="bg-background/80 backdrop-blur-sm border-t border-border/50 text-foreground py-8 relative z-10">
         <div className="container mx-auto px-4">
           <nav className="flex justify-center">
             <ul className="flex space-x-8">
-              <li><button onClick={() => scrollToSection('about')} className="hover:text-blue-400 transition-colors">About</button></li>
-              <li><button onClick={() => scrollToSection('skills')} className="hover:text-blue-400 transition-colors">Skills</button></li>
-              <li><button onClick={() => scrollToSection('projects')} className="hover:text-blue-400 transition-colors">Projects</button></li>
-              <li><button onClick={() => scrollToSection('contact')} className="hover:text-blue-400 transition-colors">Contact</button></li>
+              <li><button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors duration-300">About</button></li>
+              <li><button onClick={() => scrollToSection('skills')} className="hover:text-primary transition-colors duration-300">Skills</button></li>
+              <li><button onClick={() => scrollToSection('projects')} className="hover:text-primary transition-colors duration-300">Projects</button></li>
+              <li><button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors duration-300">Contact</button></li>
             </ul>
           </nav>
         </div>
