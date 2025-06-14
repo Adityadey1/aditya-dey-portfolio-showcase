@@ -1,5 +1,6 @@
 
 import React from 'react';
+import profilepic from '../assets/profile-pic.png'
 import { ArrowDown, Github, Linkedin, Download, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -65,7 +66,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 animate-float hover:animate-pulse">
                 <div className="w-full h-full rounded-full overflow-hidden bg-background border-4 border-background">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                    src={profilepic}
                     alt="Aditya Dey profile picture"
                     className="w-full h-full object-cover transition-all duration-500 hover:scale-110"
                   />

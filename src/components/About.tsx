@@ -1,5 +1,5 @@
 
-import React from 'react';
+import aboutpic from '../assets/about-pic.png'
 import { ArrowDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -17,7 +17,7 @@ const About = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop"
+                  src={aboutpic}
                   alt="Profile picture"
                   className="w-full h-full object-cover"
                 />
@@ -68,11 +68,11 @@ const About = () => {
 
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <p className="text-slate-700 leading-relaxed text-lg">
-                Hi, I'm <span className="font-semibold text-blue-600">Aditya Dey</span>. 
-                I'm currently a final-year Computer Engineering student at LD College of Engineering. 
-                With a strong passion for <span className="font-semibold">cybersecurity and ethical hacking</span>, 
-                I love exploring the intricacies of secure systems and staying updated with the latest 
-                advancements in technology. My goal is to contribute to a safer digital world while 
+                Hi, I'm <span className="font-semibold text-blue-600">Aditya Dey</span>.
+                I'm currently a final-year Computer Engineering student at LD College of Engineering.
+                With a strong passion for <span className="font-semibold">cybersecurity and ethical hacking</span>,
+                I love exploring the intricacies of secure systems and staying updated with the latest
+                advancements in technology. My goal is to contribute to a safer digital world while
                 constantly challenging myself to grow and innovate in this field.
               </p>
             </div>
